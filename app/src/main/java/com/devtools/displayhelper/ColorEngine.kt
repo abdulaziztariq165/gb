@@ -48,7 +48,6 @@ object ColorEngine {
 
     private fun g(k: String): Float = Prefs.f(k, adjustments.first { it.key == k }.def)
 
-    private typealias Mat = DoubleArray
 
     private fun ident(): Mat = doubleArrayOf(1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0)
 
@@ -146,3 +145,4 @@ object ColorEngine {
 
     fun resetScreen() { ex.execute { Shell.exec("service call SurfaceFlinger 1015 i32 0") } }
 }
+typealias Mat = DoubleArray
